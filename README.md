@@ -14,7 +14,7 @@ Esta es una API sencilla desarrollada con FastAPI para consultar el valor de ven
    ```bash
    git clone https://github.com/JotaVeBass/apibna.git
    cd apibna
-   
+
 Instala las dependencias: Utiliza pip para instalar las librerías necesarias.
 pip install fastapi uvicorn
 Asegúrate de que también tengas instalado el módulo aux, que contiene la función get_currency_bna_value para obtener valores de cambio.
@@ -24,8 +24,7 @@ Estructura del proyecto:
 
 Asegúrate de que la estructura del proyecto sea la siguiente:
 
-bash
-Copiar código
+
 ├── main.py             # Archivo principal de la API
 └── aux.py              # Módulo auxiliar para obtener valores de moneda
 Ejecuta la API: Inicia el servidor de desarrollo con uvicorn.
@@ -41,6 +40,7 @@ Ejemplo de uso:
 
 ruby
 GET http://127.0.0.1:8000/currency/sale/dolar
+
 Respuesta:
 
 json
