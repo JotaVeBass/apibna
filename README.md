@@ -1,7 +1,5 @@
 # Currency API
 
-Esta es una API sencilla desarrollada con FastAPI para consultar el valor de venta de monedas extranjeras (USD y EUR) usando valores de una fuente de datos externa. Los valores se actualizan automáticamente cada 10 minutos para mantener la información actualizada.
-
 ## Requisitos
 
 - Python 3.7 o superior
