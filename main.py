@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 
 
-app = FastAPI()
+app = FastAPI(title="API CURRENCIES")
 
 logger = logging.getLogger(__name__) 
 
@@ -34,7 +34,7 @@ async def iniciar_tarea_consulta():
 async def get_currency_sale(currency: str):
     global resultado_actual
     try: 
-        value = resultado_actual["valores"][currency]
+        value = resultado_actual["valores"][currency.lower()]
         timestamp = resultado_actual["timestamp"]
     except KeyError:
         raise HTTPException(status_code=404, detail=f"Moneda {currency} no encontrada")
