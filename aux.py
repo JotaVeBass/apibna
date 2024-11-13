@@ -23,12 +23,12 @@ def get_currency_bna_value(currency_name):
     page = requests.get(base_url) 
 
     soup = BeautifulSoup(page.content, "html.parser")
-    billetes_table = soup.find(id="billetes")
+    divisas_table = soup.find(id="divisas")
 
-    if not billetes_table:
+    if not divisas_table:
         raise ValueError("No se puede encontrar la tabla de cotizaciones (id='billetes')")
 
-    all_tds = billetes_table.find_all("td", class_=False)
+    all_tds = divisas_table.find_all("td", class_=False)
 
     # Dictionary to map currency name to index within tds
     currency_index = {'dolar': 1, 'euro': 3}
