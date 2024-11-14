@@ -29,7 +29,7 @@ async def consultar_periodicamente():
             "timestamp": datetime.datetime.now().isoformat(),
         }
         # logger.INFO("Valores Actualizados")
-        await asyncio.sleep(600)
+        await asyncio.sleep(21600)
 
 
 @app.on_event("startup")
